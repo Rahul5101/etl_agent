@@ -1,4 +1,4 @@
-### AI-Driven ETL Pipeline: Autonomous Agents for Postgres to BigQuery Migration
+# AI-Driven ETL Pipeline: Autonomous Agents for Postgres to BigQuery Migration
 
 This project implements an autonomous ETL (Extract-Transform-Load) pipeline using CrewAI agents, Google Gemini LLM, PostgreSQL, and Google BigQuery.
 The workflow intelligently extracts data from Postgres, transforms it, and loads it into BigQuery — fully automated and orchestrated by AI agents.
@@ -40,19 +40,15 @@ This creates a self-governing ETL pipeline that can adapt, debug itself, and sca
 ## Installation
 
 
-1. clone the repo
-    git clone https://github.com/yourusername/etl-agent.git
-    cd etl-agent
+1.  git clone https://github.com/yourusername/etl-agent.git
+    and then cd etl-agent
 
-2. create and activate the virtual environment
-    python -m venv myenv
-    myenv/Scripts/activate
+2.  python -m venv myenv
+    and myenv/Scripts/activate
 
-3. install dependicies
-    pip install -r requirements.txt
+3.  pip install -r requirements.txt
 
-4. run the main.py file
-    python run main.py (complete path of main.py file)
+4.  python run main.py (complete path of main.py file)
 
 
 ### Customizing
@@ -61,7 +57,7 @@ This creates a self-governing ETL pipeline that can adapt, debug itself, and sca
 
 - Modify `src/etl_agent/main.py` to add custom inputs for your agents and tasks
 
-# Modify - give your credential_path file to input into the main file (other two input are already give, you can change if you want)
+## Modify - give your credential_path file to input into the main file (other two input are already give, you can change if you want)
 
 
 
