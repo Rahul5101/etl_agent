@@ -33,7 +33,7 @@ This creates a self-governing ETL pipeline that can adapt, debug itself, and sca
 
 2. Transformer Agent cleans & processes JSON
 
-3. Validator Agent validates the data coming from previous agent for bigquery schema
+3. Validator Agent validates the data coming from previous agent for bigquery
 
 4. Loader Agent uses BigQueryLoadTool → loads into BigQuery table
 
