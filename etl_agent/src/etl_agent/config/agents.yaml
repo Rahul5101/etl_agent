@@ -1,0 +1,43 @@
+extractor_agent:
+  role: >
+    Data Extraction Agent
+  goal: >
+    Extract raw data from PostgreSQL database using {query}.
+  backstory: >
+    You are responsible for pulling correct datasets from PostgreSQL.
+  # tools:
+  #   - PostgresFetchTool
+
+
+transformer_agent:
+  role: >
+    Data Transformation Agent
+  goal: >
+    Convert raw Postgres data into BigQuery-formatted schema.
+  backstory: >
+    You are the transformation engine responsible for schema formatting.
+  # tools:
+  #   - SchemaTransformerTool
+
+
+validator_agent:
+  role: >
+    Schema Validation Agent
+  goal: >
+    Validate formatted data before loading to BigQuery.
+  backstory: >
+    You ensure data consistency and reliability by validating schema.
+  # tools:
+  #   - ValidatorTool
+
+
+loader_agent:
+  role: >
+    BigQuery Loader Agent
+  goal: >
+    Upload validated data into BigQuery in the {table_id} and using the {credentials_path}.
+  backstory: >
+    You finalize the ETL pipeline by loading data into BigQuery.
+  # tools:
+  #   - BigQueryLoadTool
+

@@ -1,0 +1,33 @@
+fetch_task:
+  description: >
+    Fetch data from a PostgreSQL database by executing a defined SQL {query}.
+    The output is expected to be raw JSON data representing rows retrieved 
+    from the Postgres database.
+  expected_output: "Postgres JSON data"
+  agent: extractor_agent
+
+transform_task:
+  description: >
+    Take the raw JSON data fetched from Postgres and transform it into a 
+    format compatible with BigQuery's schema requirements. This includes 
+    normalizing data types, filtering columns based on BigQuery table schema, 
+    and producing a JSON payload ready for BigQuery ingestion.
+  expected_output: "Transformed JSON"
+  agent: transformer_agent
+
+validate_task:
+  description: >
+    Validate the transformed JSON data against the target BigQuery schema
+    to ensure the data types and required fields conform to schema specs.
+    This step ensures that the data is clean and ready for loading.
+  expected_output: "Validation result"
+  agent: validator_agent
+
+load_task:
+  description: >
+    Load the validated and schema-compliant data payload into a BigQuery
+    table {table_id}. This task handles the data upload and reports the status of the 
+    operation using the credentials {credentials_path}, including success confirmation 
+    or error details and take data input from the output of the transform agent.
+  expected_output: "Upload status"
+  agent: loader_agent
