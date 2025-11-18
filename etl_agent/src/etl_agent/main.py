@@ -20,7 +20,8 @@ def run():
     inputs = {
         'query': 'Select * from customers',
         'table_id': 'postgres-bigquery-agent.cusitomerDB.myfriends_detail',
-        'credentials_path': r"put your bigquery credential path here"
+        # 'credentials_path': r"put your bigquery credential path here",
+        'credentials_path': r"C:\Users\Dell\Downloads\postgres-bigquery-agent-c25ae722d534.json"
         
     }
 

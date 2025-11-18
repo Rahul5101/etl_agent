@@ -11,7 +11,8 @@ transform_task:
     Take the raw JSON data fetched from Postgres and transform it into a 
     format compatible with BigQuery's schema requirements. This includes 
     normalizing data types, filtering columns based on BigQuery table schema, 
-    and producing a JSON payload ready for BigQuery ingestion.
+    and producing a JSON payload ready for BigQuery ingestion and in last at the agent final answer
+    just return the tool output , dont make any changes in the tool output and return it simply.
   expected_output: "Transformed JSON"
   agent: transformer_agent
 
